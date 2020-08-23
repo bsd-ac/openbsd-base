@@ -26,7 +26,7 @@
     mode: 0644
     owner: root
     group: wheel
-  with_items: '{{ base_ksh_profiled_files_standard }}'
+  with_items: '{{ base_ksh_profiled_files }}'
 
 - name: copy custom user files
   copy:

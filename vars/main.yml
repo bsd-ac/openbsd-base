@@ -1,3 +1,8 @@
 ---
 
-base_ksh_profiled_files: "{{ base_ksh_profiled_files_standard + (base_ksh_profiled_files_extra | default([])) }}"
+# if you don't want to copy the files to the folder and instead want to copy files
+# from somewhere on you computer you can also do that by defining the variable
+# base_ksh_profiled_files_extra 
+# this is supposed to be a list of files you want copied into /etc/profile.d/
+# again, make sure that they are ending with a .sh for /etc/profile to load them
+base_ksh_profiled_files: "{{ base_ksh_profiled_files + (base_ksh_profiled_files_extra | default([])) }}"
