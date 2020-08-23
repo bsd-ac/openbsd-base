@@ -5,4 +5,4 @@
 # base_ksh_profiled_files_extra 
 # this is supposed to be a list of files you want copied into /etc/profile.d/
 # again, make sure that they are ending with a .sh for /etc/profile to load them
-base_ksh_profiled_files: "{{ base_ksh_profiled_files + (base_ksh_profiled_files_extra | default([])) }}"
+base_ksh_profiled_files: "{{ base_ksh_profiled_files_standard + (base_ksh_profiled_files_extra | default([])) }}"
