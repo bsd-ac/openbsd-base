@@ -35,4 +35,5 @@
     owner: root
     group: wheel
   with_fileglob:
-    - custom_profile.d/*
+    - custom_profile.d/*.sh
+
