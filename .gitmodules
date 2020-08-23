@@ -1,0 +1,3 @@
+[submodule "files/polyglot"]
+	path = files/polyglot
+	url = https://github.com/agkozak/polyglot.git
