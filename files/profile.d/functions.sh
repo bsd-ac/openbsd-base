@@ -28,11 +28,11 @@ meowd() {
 }
 
 if_ip4() {
-  ifconfig $1 | grep 'inet ' | cut -f2 | awk '{print $2}'
+  ifconfig $1 | awk '/inet /{print $2}'
 }
 
 if_ip6() {
-  ifconfig $1 | grep 'inet6 ' | cut -f2 | awk '{print $2}'
+  ifconfig $1 | awk '/inet6 /{print $2}'
 }
 
 pipdepends() {
