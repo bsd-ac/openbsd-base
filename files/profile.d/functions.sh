@@ -27,6 +27,14 @@ meowd() {
 	printf '%s\n' "${decrypteddata}"
 }
 
+if_ip4() {
+  ifconfig $1 | grep 'inet ' | cut -f2 | awk '{print $2}'
+}
+
+if_ip6() {
+  ifconfig $1 | grep 'inet6 ' | cut -f2 | awk '{print $2}'
+}
+
 pipdepends() {
 	PACKAGE=$1
 	pip download $PACKAGE -d /tmp --no-binary :all:-v 2>&1 \
